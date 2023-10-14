@@ -34,6 +34,5 @@ public class ClienteService {
     public void excluir(Long id){
         Cliente deletedCliente = clienteRepository.findById(id).get();
         clienteRepository.delete(deletedCliente);   
-
     }
 }
