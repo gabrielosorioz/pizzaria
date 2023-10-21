@@ -1,5 +1,4 @@
 package com.universidade.pizzaria.entity;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,6 +15,10 @@ public class ItemPedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private int quantidade;
     private String tamanho;
+
+    @ManyToOne
+    @JoinColumn(name = "id_produto")
+    private Produto produto;
 
     @ManyToOne
     @JoinColumn(name = "id_pedido")
