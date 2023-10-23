@@ -569,7 +569,7 @@ const atualizarCarrinho = () => {
 // }
 
 const abrirCheckout = () => {
-    window.location.href = 'checkout.html';
+    window.location.href = 'checkout';
 }
 
 const finalizarCompra = () => {

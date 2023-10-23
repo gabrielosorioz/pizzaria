@@ -14,10 +14,13 @@ public class PizzariaController {
     private ProdutoService produtoService;
 
     @GetMapping("/pizza-page")
-    public String pizzaPage(Model model) {
-        List<Produto> produtosList = produtoService.buscarTodos(); 
-        model.addAttribute("produtosList",produtosList);
+    public String pizzaPage() {
         return "index";
+    }
+
+    @GetMapping("/checkout")
+    public String CheckoutPage() {
+        return "checkout";
     }
 
 }
