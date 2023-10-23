@@ -568,12 +568,24 @@ const atualizarCarrinho = () => {
 // 	}
 // }
 
+const abrirCheckout = () => {
+    window.location.href = 'checkout.html';
+}
+
 const finalizarCompra = () => {
     seleciona('.cart--finalizar').addEventListener('click', () => {
-        console.log('Finalizar compra')
+        abrirCheckout();
+        // Ocultar o carrinho
         seleciona('aside').classList.remove('show')
         seleciona('aside').style.left = '100vw'
         seleciona('header').style.display = 'flex'
+
+        // Exibir a tela de checkout
+        const checkoutForm = seleciona('#checkout-form');
+        checkoutForm.style.display = 'block';
+
+        // Atualizar o resumo do pedido na tela de checkout
+        atualizarResumoDoPedido();
     })
 }
 
