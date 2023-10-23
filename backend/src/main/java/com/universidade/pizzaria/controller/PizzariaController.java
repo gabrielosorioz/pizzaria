@@ -13,7 +13,7 @@ public class PizzariaController {
     @Autowired
     private ProdutoService produtoService;
 
-    @GetMapping("/pizza-page")
+    @GetMapping("/home")
     public String pizzaPage() {
         return "index";
     }
