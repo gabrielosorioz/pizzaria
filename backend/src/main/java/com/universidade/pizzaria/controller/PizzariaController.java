@@ -19,8 +19,13 @@ public class PizzariaController {
     }
 
     @GetMapping("/checkout")
-    public String CheckoutPage() {
+    public String checkoutPage() {
         return "checkout";
+    }
+
+    @GetMapping("/payment")
+    public String paymentPage() {
+        return "payment";
     }
 
 }

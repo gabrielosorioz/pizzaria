@@ -572,6 +572,10 @@ const abrirCheckout = () => {
     window.location.href = 'checkout';
 }
 
+const abrirPayment = () => {
+    window.location.href = 'payment';
+}
+
 const finalizarCompra = () => {
     seleciona('.cart--finalizar').addEventListener('click', () => {
         abrirCheckout();
